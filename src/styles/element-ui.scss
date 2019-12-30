@@ -1,0 +1,225 @@
+ //to reset element-ui default css
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+// element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// 菜单管理
+.permission-trees{
+  .el-tree-node__content{
+    height: 100%;
+    border-bottom: 1px solid #ebeef5;
+  }
+}
+
+// mini-dialog
+.mini-dialog{
+  .el-dialog__body{
+    padding: 0px 20px;
+  }
+  .el-form-item{
+    margin-bottom: 20px;
+  }
+}
+
+/* 分页 */
+.blue-theme.el-pagination{
+  text-align: center;
+  margin-top: 15px;
+}
+.blue-theme .el-pagination__total{
+  color: #92abcd;
+}
+.blue-theme .el-pagination__jump{
+  color: #92abcd;
+}
+.blue-theme .el-pager li{
+  border-top: solid 1px #dcdfe6;
+  border-bottom: solid 1px #dcdfe6;
+}
+.blue-theme .el-pager li.active{
+  background-color: #5873fe;
+  border-color: #5873fe;
+  color: #ffffff;
+}
+.blue-theme.el-pagination .btn-next{
+  border: solid 1px #dcdfe6;
+  border-left: none;
+}
+.blue-theme.el-pagination .btn-prev{
+  border: solid 1px #dcdfe6;
+  border-right: none;
+}
+
+.el-date-editor .el-range-separator{
+  padding: 0 2px;
+}
+
+// popover
+.el-popover--plain{
+  word-break: break-all;
+}
+
+// 创建项目-表单样式更新
+.server-container, .locationCard-container, .upstream-container, .create-ssl-container, .define-container {
+  .el-form--label-top .el-form-item__label{
+    padding: 0;
+  }
+  .input-with-select{
+    .el-input-group__append, .el-input-group__prepend{
+      background: #ffffff;
+    }
+  }
+  .el-textarea__inner{
+    height: 120px;
+  }
+  .el-select {
+    width: 100%;
+  }
+  .wd100{
+    width: 100%;
+  }
+  .wd10{
+    display: inline-block;
+    width: 10%;
+  }
+  .wd20{
+    display: inline-block;
+    width: 20%;
+  }
+  .wd30{
+    display: inline-block;
+    width: 30%;
+  }
+  .wd32{
+    display: inline-block;
+    width: 32%;
+  }
+  .wd40{
+    display: inline-block;
+    width: 40%;
+  }
+  .wd45{
+    display: inline-block;
+    width: 45%;
+  }
+  .wd50{
+    display: inline-block;
+    width: 50%;
+  }
+  .wd60{
+    display: inline-block;
+    width: 60%;
+  }
+  .circle-btn{
+    width: 25px;
+    height: 25px;
+    padding: 1px 0 0 0;
+    margin-left: 10px;
+  }
+  .ssl-container{
+    padding: 0 15px;
+    border: solid 1px #dbdfe5;
+    border-radius: 4px;
+  }
+  .remarks{
+    color: #acb2b9;
+  }
+}
+.onlineApply-container{
+  .el-select {
+    width: 100%;
+  }
+}
+.enviroment-container{
+  .form-item-textarea .el-textarea__inner{
+    height: 200px;
+  }
+  .el-form--label-top .el-form-item__label{
+    padding: 0;
+  }
+}
+.search-input .el-autocomplete {
+  width: 100%;
+}
+
+.blue-theme .el-dropdown-link{
+  font-weight: 500;
+  font-size: 14px;
+  color: #409eff;
+  cursor: pointer;
+}
+.memberSearch-dialog {
+  .el-checkbox{
+    font-weight: 400;
+  }
+  .el-checkbox+.el-checkbox{
+    margin-left: 20px;
+  }
+  .el-checkbox__label{
+    padding-left: 5px;
+  }
+}
+.create-ssl-container{
+ .el-radio__label div{
+    display: inline-block;
+  }
+  .el-upload-list{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .el-upload-list__item:first-child{
+    margin-top: 0;
+  }
+}
+
+// 蓝色步骤条
+.blue-steps{
+  .el-step__head.is-process, .el-step__title.is-process, .el-step__description.is-process{
+    color: #409eff;
+    border-color: #409eff;
+  }
+}
+
+.larger-confirm{
+  width: 450px;
+}
+
+.el-button--primary {
+  border-color: #5873fe;
+  background-color: #5873fe;
+}
+
+.el-button--primary:focus, .el-button--primary:hover {
+  border-color: #6b82f7;
+  background-color: #6b82f7;
+}
+
+.el-switch.is-checked .el-switch__core {
+  border-color: #5873fe;
+  background-color: #5873fe;
+}

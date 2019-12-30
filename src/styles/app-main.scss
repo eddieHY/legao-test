@@ -1,0 +1,268 @@
+.gradient-bg{
+  border: none;
+  background: #1890FF;
+  background: -webkit-linear-gradient(left, #0094f3 0%, #007ae8 45%, #0473d8 100%);
+  background: -o-linear-gradient(right, #0094f3 0%, #007ae8 45%, #0473d8 100%);
+  background: -moz-linear-gradient(right, #0094f3 0%, #007ae8 45%, #0473d8 100%);
+  background: linear-gradient(to right, #0094f3 0%, #007ae8 45%, #0473d8 100%);
+  &:hover {
+    border: none;
+    background: -webkit-linear-gradient(left, #0094f3 0%, #1683e6 45%, #0977da 100%);
+    background: -o-linear-gradient(right, #0094f3 0%, #1683e6 45%, #0977da 100%);
+    background: -moz-linear-gradient(right, #0094f3 0%, #1683e6 45%, #0977da 100%);
+    background: linear-gradient(to right, #0094f3 0%, #1683e6 45%, #0977da 100%);
+  }
+}
+// 公共样式
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.larger-form-item{
+  max-width: 65%;
+}
+.middle-form-item{
+  max-width: 50%;
+}
+.small-form-item{
+  max-width: 35%;
+}
+
+// 公共panel样式
+.panels {
+  margin-bottom: 20px;
+  color: #333333;
+  background: #ffffff;
+  .panel-header,.panel-footer {
+    min-height: 55px;
+    line-height: 55px;
+    padding: 0 20px;
+    border-bottom: solid 1px #F0F2F5;
+    .name{
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .oprations{
+      margin-left: 5px;
+      margin-right: 5px;
+      color: rgba(0,0,0,.65);
+    }
+    .search{
+      width: 200px;
+      margin-top: 1px;
+    }
+  }
+  .panel-content {
+    font-size: 14px;
+    padding: 20px;
+    color: #606266;
+    position: relative;
+    // .el-row{
+    //   margin: 15px 0;
+    // }
+    .el-table {
+      margin-top: 10px;
+    }
+    .el-table thead th{
+      background-color: #f5f7fa;
+    }
+  }
+  .panel-tabs{
+    padding: 20px;
+  }
+  .el-col-x{
+    color: #333333;
+  }
+  .panel-footer{
+    border-top: solid 1px #F0F2F5;
+    border-bottom: none;
+  }
+}
+
+// 表格部分-公用样式
+.custom-table-style.el-table {
+  min-height: 300px;
+  td {
+    padding: 7px 0;
+  }
+  .cell {
+    padding: 0 5px;
+  }
+  .el-table__header-wrapper {
+    th {
+      padding: 10px 0;
+      color: #666;
+      background-color: #fafafa;
+    }
+    th.is-leaf {
+      border-bottom: none;
+    }
+  }
+  .name_link {
+    color:#409EFF;
+    font-weight:500;
+  }
+  .status_dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.25);
+  }
+  .status_dot.red {
+    background:rgba(245,34,45,1);
+  }
+  .status_dot.blue {
+    background:rgba(74,144,226,1);
+  }
+  .status_dot.green {
+    background:rgba(82,196,26,1);
+  }
+}
+
+// 分页样式
+.custom-pagination.el-pagination {
+  text-align: right;
+  padding: 10px 5px 0 5px;
+  .el-pager {
+    li{
+      min-width: 30.5px;
+      line-height: 26px;
+      padding: 0;
+      margin: 0 3px;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      color: #606266;
+      background-color: #fff;
+    }
+    .active {
+      background-color: #1890FF;
+      border-color: #1890FF;
+      color: #ffffff;
+    }
+  }
+  .btn-prev, .btn-next{
+    min-width: 30.5px;
+    padding: 0;
+    margin: 0 3px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    color: #606266;
+    background-color: #fff;
+  }
+}
+
+// textarea
+.larger-el-textarea{
+  height: 300px;
+  .el-textarea__inner{
+    height: 100%;
+  }
+}
+.el-input.is-disabled .el-input__inner,
+.el-textarea.is-disabled .el-textarea__inner{
+  color: #888b92;
+}
+
+// 含有搜索的tabs
+.actions-tabs .el-tabs__content{
+  overflow: unset;
+}
+.tabs-actions-wrapper{
+  position: absolute;
+  right: 10px;
+  top: -40px;
+  z-index: 2;
+  .actions-btn{
+    float: right;
+    margin: -1px 5px 0 5px;
+  }
+  .actions-input{
+    width: 200px;
+  }
+}
+
+// 弹框样式
+.el-dialog__header{
+  padding: 15px 20px;
+  border-bottom: solid 1px #F0F2F5;
+}
+.el-dialog__footer{
+  padding: 15px 20px 15px;
+  border-top: solid 1px #F0F2F5;
+}
+.dialog-center{
+  .el-dialog__footer{
+    text-align: center;
+  }
+}
+.dialog-padding{
+  .el-dialog__body{
+    padding: 20px 20px 5px;
+  }
+}
+
+// tinymce
+.mce-flow-layout{
+  overflow: auto;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+// 条形虚框添加按钮
+.add-wrapper{
+  width: 100%;
+  height: 32px;
+  line-height: 30px;
+  border: 1px dashed #dcdfe6;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  &:hover{
+    border-color: #40a9ff;
+    color: #40a9ff;
+  }
+}
+
+// 日志构建弹框样式
+.publishConsole-dialog,.publishConsole-preview-dialog, .Config-dialog{
+  .el-dialog__headerbtn {
+    top: 15px;
+    font-size: 18px;
+  }
+  .el-dialog__body{
+    padding: 10px 20px 20px 20px;
+  }
+  pre{
+    height: 100%;
+    margin: 0;
+    background: #282c34;
+    color: #abb2bf;
+  }
+  code.hljs{
+    height: 100%;
+    padding: 8px;
+    line-height: 24px;
+    background: #282c34;
+    color: #abb2bf;
+  }
+  .el-tabs__header{
+    margin: 0 0 10px;
+  }
+}
+.tab-console-dialog{
+  .el-dialog__body{
+    padding: 0 20px 20px 20px;
+  }
+  .tab-code{
+    height: calc(100% - 50px);
+  }
+}

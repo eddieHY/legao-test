@@ -6,7 +6,7 @@
           <item icon="config" :title="item.name" />
         </template>
         <template v-for="(child, index) in item.children">
-          <a :href="child.path" :key="index">
+          <a :href="resolvePath(child.path)" :key="index">
             <el-menu-item :index='item.index'>
               <item icon="config" :title="child.name" />
             </el-menu-item>
@@ -15,7 +15,7 @@
       </el-submenu>
     </template>
     <template v-else>
-      <a :to="item.path" style="width:240px;">
+      <a :href="item.path" style="width:240px;">
         <el-menu-item :index="item.index">
           <i style="font-size: 16px;" class="iconfont icon-code1" />
           {{item.name}}
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import path from 'path'
 import Item from './Item'
 
 export default {
@@ -37,5 +38,15 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      basePath: window.location.protocol
+    }
+  },
+  methods: {
+    resolvePath(routePath) {
+      return path.resolve(this.basePath, routePath)
+    }
+  }
 }
 </script>

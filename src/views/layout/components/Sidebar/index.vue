@@ -101,7 +101,7 @@ export default {
         },
         {
           name: '首页',
-          path: 'www.xueersi.com',
+          path: 'https://www.xueersi.com',
           index: '3'
         },
         {

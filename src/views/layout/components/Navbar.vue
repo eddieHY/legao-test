@@ -25,13 +25,11 @@
 <script>
 // import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
+import { mapState } from 'vuex'
 
 export default {
   data () {
     return {
-      sidebar: {
-        opened: true
-      }
     }
   },
   components: {
@@ -39,6 +37,9 @@ export default {
     Hamburger
   },
   computed: {
+    ...mapState({
+      sidebar: state => state.sidebar
+    })
   },
   mounted() {
     this.$nextTick(() => {
@@ -49,7 +50,7 @@ export default {
     SetBaseInfo () {
     },
     toggleSideBar() {
-      
+      this.$store.commit('TOGGLE_SIDEBAR')
     },
     logout() {
       window.console.log('======退出==')

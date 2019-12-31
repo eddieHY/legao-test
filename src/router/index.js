@@ -23,21 +23,46 @@ export const adminRouterMap = [
   {
     path: '/channelsInfo',
     name: 'channels-info',
-    component: ChannelsInfo
+    component: Layout,
+    redirect: '/channelsInfo/list',
+    children: [
+      {
+        name: 'channels-info-list',
+        path: '/channelsInfo/list',
+        component: ChannelsInfo
+      }
+    ]
   },
   {
     path: '/columnsInfo',
     name: 'columns-info',
-    component: ColumnsInfo
+    component: Layout,
+    redirect: '/columnsInfo/list',
+    children: [
+      {
+        name: 'columns-info-list',
+        path: '/columnsInfo/list',
+        component: ColumnsInfo
+      }
+    ]
   },
   {
     path: '/pagesInfo',
     name: 'pages-info',
-    component: PagesInfo
+    component: Layout,
+    redirect: '/pagesInfo/list',
+    children: [
+      {
+        name: 'pages-info-list',
+        path: '/pagesInfo/list',
+        component: PagesInfo
+      }
+    ]
   }
 ]
 
 const router = new Router({
+  mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes: adminRouterMap
 })
